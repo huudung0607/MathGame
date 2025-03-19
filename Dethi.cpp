@@ -2,6 +2,7 @@
 #include "BieuthucCong.h"
 #include "BieuthucTru.h"
 #include "BieuthucNhan.h"
+#include "BieuthucPT.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -28,25 +29,22 @@ int Dethi::danhgia(istream& input) {
 	for (int i = 0; i < ds.size(); i++)
 	{
 		Bieuthuc bt = ds[i];
-		cout << bt << " = ";
+		cout << bt;
 		float traloi;
 		input >> traloi;
-		if (traloi == 0)
-		{
-			break;
-		}
-		else if (bt.kiemtra(traloi)) 
+		if (bt.kiemtra(traloi)) 
 		{
 			cnt++;
 		}
 	}
-	return cnt;	
+	return cnt;
 }
 
 void Dethi::xuat(ostream& output) 
 {
 	for (int i = 0; i < ds.size(); i++) 
 	{
-		output << ds[i] << " = ?" << endl;
+		output << ds[i] << endl;
 	}
+	cout << endl;
 }

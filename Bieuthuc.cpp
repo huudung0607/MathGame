@@ -52,7 +52,6 @@ bool Bieuthuc::kiemtra(float traloi)
 {
     return giatri() == traloi;
 }
-
 ostream& operator<<(ostream& out, Bieuthuc bt)
 {
     out << bt.a << " " << bt.pheptoan << " " << bt.b << " = ";
